@@ -80,10 +80,11 @@ public class PlayerController : MonoBehaviour
         transform.localPosition = pos;
 
 
-        //if (vertical > 0) {
+        if (vertical > 0)
+        {
 
-        //    rbob.AddForce(new Vector2(0f, jumpforce), ForceMode2D.Force);
-        
-        //}
+            rbob.AddForce(new Vector2(0f, jumpforce), ForceMode2D.Force);
+
+        }
     }
 }
