@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class levelcontroller : MonoBehaviour
 {
+
+    public string next_level;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.GetComponent<PlayerController>()!=null);
-        Debug.Log("THE PLAYER COLLIDED WITH THE CHECKPPOINT OF END GAME");
+        SceneManager.LoadScene(next_level);
     }
 }

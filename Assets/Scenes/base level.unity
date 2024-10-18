@@ -742,6 +742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b46e586d6f8b66c4da8c8f38de66cfad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  next_level: level2
 --- !u!61 &1613864944
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1455,7 +1456,7 @@ PrefabInstance:
     - target: {fileID: 7546713299302632463, guid: 72c71fa9124d819458f7ff1124bba768,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.34
+      value: 14.79
       objectReference: {fileID: 0}
     - target: {fileID: 7546713299302632463, guid: 72c71fa9124d819458f7ff1124bba768,
         type: 3}
