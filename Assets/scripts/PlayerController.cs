@@ -11,13 +11,14 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rbob;
     public float speed;
     public  float jumpforce;
-
+    public scorerefresh scorecontroller;
     // Awake is called when the script instance is being loaded
     private void Awake()
     {
         // Initialize the animator component
         animator = gameObject.GetComponent<Animator>();
         rbob= gameObject.GetComponent<Rigidbody2D>();
+
     }
 
     // Start is called before the first frame update
@@ -86,5 +87,10 @@ public class PlayerController : MonoBehaviour
             rbob.AddForce(new Vector2(0f, jumpforce), ForceMode2D.Force);
 
         }
+    }
+
+      public void pickup()
+    {
+        scorecontroller.increasescore(10);
     }
 }
