@@ -6,7 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/base level.unity
+    path: Assets/Scenes/Staringscence.unity
+    guid: e0400c651083a4b4abe081cca919d237
+  - enabled: 1
+    path: Assets/Scenes/level1.unity
     guid: 01fcf85361119bf448477bcddb3e78e8
   - enabled: 1
     path: Assets/Scenes/level2.unity
