@@ -15,7 +15,7 @@ public class patrollinglogic : MonoBehaviour
             if(Vector2.Distance(transform.position, patrolingpoints[0].position) < .2f)
             {
 
-                transform.localScale=  new Vector3(-1, 1, 1);
+                transform.localScale=  new Vector3(1, 1, 1);
                 patroldestination = 1;
 
             }
@@ -28,7 +28,7 @@ public class patrollinglogic : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, patrolingpoints[1].position, enemyspeed * Time.deltaTime);
             if (Vector2.Distance(transform.position, patrolingpoints[1].position) < .2f)
             {
-                transform.localScale = new Vector3(1, 1, 1);
+                transform.localScale = new Vector3(-1, 1, 1);
                 patroldestination = 0;
             }
         }

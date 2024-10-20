@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/level2.unity
     guid: 26b8a26297ec0674eb66b6dd528f5ca5
+  - enabled: 1
+    path: Assets/Scenes/restartandquitscreen.unity
+    guid: 4fcf8a9d53c84b744bb781f7dc5c9fdd
   m_configObjects: {}

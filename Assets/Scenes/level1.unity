@@ -132,7 +132,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 66284139}
-  - component: {fileID: 66284138}
   - component: {fileID: 66284137}
   m_Layer: 0
   m_Name: point 1
@@ -167,18 +166,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &66284138
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 66284136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d257cf8203f8e643a7586f7437dcad4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &66284139
 Transform:
   m_ObjectHideFlags: 0
@@ -187,7 +174,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 66284136}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.929, y: 0.1, z: -0.007127866}
+  m_LocalPosition: {x: 23.482, y: 0.48, z: -0.007127866}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -603,7 +590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyspeed: 0
-  restart_level: level1
+  restart_level: restartandquitscreen
   sr: {fileID: 755951185}
   animator: {fileID: 6618190589756286583}
 --- !u!95 &220522010
@@ -755,7 +742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d804db1c91449d4ca1936984f333fe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  restart_level: level1
+  restart_level: restartandquitscreen
 --- !u!1 &418736295
 GameObject:
   m_ObjectHideFlags: 0
@@ -1057,22 +1044,22 @@ PrefabInstance:
     - target: {fileID: 6260249832360530301, guid: e25f33e948a00e84287fa5a91c226084,
         type: 3}
       propertyPath: m_Size.x
-      value: 1.515441
+      value: 0.64583874
       objectReference: {fileID: 0}
     - target: {fileID: 6260249832360530301, guid: e25f33e948a00e84287fa5a91c226084,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.4210263
+      value: 0.30953884
       objectReference: {fileID: 0}
     - target: {fileID: 6260249832360530301, guid: e25f33e948a00e84287fa5a91c226084,
         type: 3}
       propertyPath: m_Offset.x
-      value: 0.047976017
+      value: 0.48277712
       objectReference: {fileID: 0}
     - target: {fileID: 6260249832360530301, guid: e25f33e948a00e84287fa5a91c226084,
         type: 3}
       propertyPath: m_Offset.y
-      value: 0.14026502
+      value: 0.08452129
       objectReference: {fileID: 0}
     - target: {fileID: 6279344961381519386, guid: e25f33e948a00e84287fa5a91c226084,
         type: 3}
@@ -1527,7 +1514,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1237081185}
-  - component: {fileID: 1237081184}
   - component: {fileID: 1237081183}
   m_Layer: 0
   m_Name: point 2
@@ -1562,18 +1548,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1237081184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1237081181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d257cf8203f8e643a7586f7437dcad4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1237081185
 Transform:
   m_ObjectHideFlags: 0
@@ -1875,7 +1849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyspeed: 0
-  restart_level: base level
+  restart_level: restartandquitscreen
   sr: {fileID: 755951185}
   animator: {fileID: 6618190589756286583}
 --- !u!95 &1486849759
@@ -3652,22 +3626,22 @@ PrefabInstance:
     - target: {fileID: 6260249832360530301, guid: e25f33e948a00e84287fa5a91c226084,
         type: 3}
       propertyPath: m_Size.x
-      value: 1.515441
+      value: 0.76255417
       objectReference: {fileID: 0}
     - target: {fileID: 6260249832360530301, guid: e25f33e948a00e84287fa5a91c226084,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.4210263
+      value: 0.22384149
       objectReference: {fileID: 0}
     - target: {fileID: 6260249832360530301, guid: e25f33e948a00e84287fa5a91c226084,
         type: 3}
       propertyPath: m_Offset.x
-      value: 0.047976017
+      value: 0.40051842
       objectReference: {fileID: 0}
     - target: {fileID: 6260249832360530301, guid: e25f33e948a00e84287fa5a91c226084,
         type: 3}
       propertyPath: m_Offset.y
-      value: 0.14026502
+      value: 0.041672617
       objectReference: {fileID: 0}
     - target: {fileID: 6279344961381519386, guid: e25f33e948a00e84287fa5a91c226084,
         type: 3}
