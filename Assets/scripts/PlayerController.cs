@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
+using static Cinemachine.DocumentationSortingAttribute;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,19 +14,22 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public  float jumpforce;
     public scorerefresh scorecontroller;
+    public  static int levelindex;
+
     // Awake is called when the script instance is being loaded
     private void Awake()
     {
         // Initialize the animator component
         animator = gameObject.GetComponent<Animator>();
-        rbob= gameObject.GetComponent<Rigidbody2D>();
-
+        rbob = gameObject.GetComponent<Rigidbody2D>();
+        
+        
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        // Any additional logic for start
+        
     }
 
     private void Update()

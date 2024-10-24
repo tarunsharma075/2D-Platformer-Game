@@ -11,9 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/lobbysence.unity
     guid: 73f3fea6d55ad2941a76158e2d956490
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/level 1.unity
-    guid: 66415d9bfc1dc88418b248a6166014bc
+    guid: 498d112fe1cbd82409a898caeb721a63
   - enabled: 1
     path: Assets/Scenes/level 2.unity
     guid: 26b8a26297ec0674eb66b6dd528f5ca5
@@ -23,7 +26,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/level 4.unity
     guid: dfd1212c338fb6e479b6394e181c5512
-  - enabled: 1
-    path: Assets/Scenes/restartandquitscreen.unity
-    guid: 4fcf8a9d53c84b744bb781f7dc5c9fdd
   m_configObjects: {}

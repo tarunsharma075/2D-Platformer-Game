@@ -5,12 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class deathandrestart : MonoBehaviour
 {
-    public string restart_level;
+     public GameObject restartPopup;
+    public GameObject Player;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.GetComponent<PlayerController>() != null)
         {
-            SceneManager.LoadScene(restart_level);
+            restartPopup.SetActive(true);
+            Player.SetActive(false);
         }
     }
 }
