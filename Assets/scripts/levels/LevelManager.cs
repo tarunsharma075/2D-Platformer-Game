@@ -29,9 +29,13 @@ using UnityEngine.SceneManagement;
 
     private void Start()
     {
-        if(getstatus("level 1") == LevelStatus.locked)
+        if (getstatus("level 1") == LevelStatus.locked)
         {
-            setstatus("level 1",LevelStatus.unlocked);
+            setstatus("level 1", LevelStatus.unlocked);
+        }
+        if (getstatus("Staringscence") == LevelStatus.locked){
+
+            setstatus("Staringscence", LevelStatus.unlocked);
         }
     }
 
