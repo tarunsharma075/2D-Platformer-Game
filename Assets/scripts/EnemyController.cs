@@ -12,6 +12,10 @@ public class EnemyController : MonoBehaviour
     public scorerefresh sr;
     private int score = 0;
     public Animator animator;
+    public  GameObject RestartAndMainMenu;
+    public GameObject Player;
+
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -34,7 +38,8 @@ public class EnemyController : MonoBehaviour
 
     private void changesence()
     {
-        SceneManager.LoadScene(restart_level);
+        RestartAndMainMenu.SetActive(true);
+        Player.SetActive(false);
     }
 
     private void Update()

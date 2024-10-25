@@ -593,6 +593,8 @@ MonoBehaviour:
   restart_level: restartandquitscreen
   sr: {fileID: 755951185}
   animator: {fileID: 6618190589756286583}
+  RestartAndMainMenu: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!95 &220522010
 Animator:
   serializedVersion: 5
@@ -742,7 +744,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d804db1c91449d4ca1936984f333fe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  restart_level: restartandquitscreen
+  restartPopup: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!1 &418736295
 GameObject:
   m_ObjectHideFlags: 0
@@ -1852,6 +1855,8 @@ MonoBehaviour:
   restart_level: restartandquitscreen
   sr: {fileID: 755951185}
   animator: {fileID: 6618190589756286583}
+  RestartAndMainMenu: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!95 &1486849759
 Animator:
   serializedVersion: 5
@@ -2636,7 +2641,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1613864945}
   - component: {fileID: 1613864944}
-  - component: {fileID: 1613864943}
   m_Layer: 0
   m_Name: level complete
   m_TagString: Untagged
@@ -2644,19 +2648,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1613864943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1613864942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b46e586d6f8b66c4da8c8f38de66cfad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  next_level: Staringscence
 --- !u!61 &1613864944
 BoxCollider2D:
   m_ObjectHideFlags: 0
