@@ -10,20 +10,20 @@ public class RestartLogic : MonoBehaviour
 {
 
     public string LevelToChange;
-    private Button ClickedButton;
+    public Button _clickedbutton;
     // Start is called before the first frame update
 
     private void Awake()
     {
-        ClickedButton = GetComponent<Button>();
+        _clickedbutton = gameObject.GetComponent<Button>();
 
     }
-    private void Start()
+   public void Start()
     {
-        ClickedButton.onClick.AddListener(OnClick);
+        _clickedbutton.onClick.AddListener(OnClick);
     }
 
-    private void OnClick()
+   public void OnClick()
     {
         SceneManager.LoadScene(LevelToChange);
     }

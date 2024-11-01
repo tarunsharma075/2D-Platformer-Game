@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameWonlogic : MonoBehaviour
 {
-    public GameObject winscreen;
+    public GameObject WinScreen;
     
     
 
@@ -16,8 +16,8 @@ public class GameWonlogic : MonoBehaviour
 
             
            
-            LevelManager.Instance.setstatus(SceneManager.GetActiveScene().name, LevelStatus.completed);
-            winscreen.SetActive(true);
+            LevelManager.Instance.SetStatus(SceneManager.GetActiveScene().name, LevelStatus.Completed);
+            WinScreen.SetActive(true);
         }
     }
     void Start()

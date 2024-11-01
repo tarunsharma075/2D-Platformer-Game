@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class winlogic : MonoBehaviour
+public class WinLogic : MonoBehaviour
 {
     public  string NextLevel;
     
@@ -16,8 +16,8 @@ public class winlogic : MonoBehaviour
 
             
            
-            LevelManager.Instance.setstatus(SceneManager.GetActiveScene().name, LevelStatus.completed);
-            LevelManager.Instance.setstatus(NextLevel,LevelStatus.unlocked);
+            LevelManager.Instance.SetStatus(SceneManager.GetActiveScene().name, LevelStatus.Completed);
+            LevelManager.Instance.SetStatus(NextLevel,LevelStatus.Unlocked);
                        SceneManager.LoadScene(NextLevel);
         }
     }

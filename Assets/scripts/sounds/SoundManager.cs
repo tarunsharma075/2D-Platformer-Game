@@ -8,20 +8,20 @@ public class SoundManager : MonoBehaviour
 {
 
 
-    private static SoundManager instance;
-    public static SoundManager Instance { get { return instance; } }
+    private static SoundManager _instance;
+    public static SoundManager Instance { get { return _instance; } }
     
     public AudioSource SoundEffects;
-    public AudioSource backgroundmusic;
-    public soundtype[] Sounds;
+    public AudioSource BackGroundMusic;
+    public SoundType[] Sounds;
 
 
 
     private void Awake()
     {
-        if (instance == null)
+        if (_instance == null)
         {
-            instance = this;
+            _instance = this;
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -32,33 +32,33 @@ public class SoundManager : MonoBehaviour
 
     //this class is for speific sound type you want to play a particular sound
     [Serializable]
-    public class soundtype
+    public class SoundType
     {
-        public sounds SoundType;
+        public sounds Sounds;
         public AudioClip SoundClip;
     }
 
 
-    public void playmusc(sounds sound)
+    public void PlayMusic(sounds sound)
     {
 
-        AudioClip clip = Getsoundclip(sound);
+        AudioClip clip = GetSoundClips(sound);
         if (clip != null) {
 
-            backgroundmusic.clip= clip;
-            backgroundmusic.Play();
+            BackGroundMusic.clip= clip;
+            BackGroundMusic.Play();
         }
     }
 
 
     private void Start()
     {
-        playmusc(sounds.background);
+        PlayMusic(sounds.BackGround);
     }
     public void Play(sounds Sound)
     {
 
-        AudioClip clip = Getsoundclip(Sound);
+        AudioClip clip = GetSoundClips(Sound);
 
         if (clip != null)
         {
@@ -69,9 +69,9 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public  AudioClip Getsoundclip(sounds sound)
+    public  AudioClip GetSoundClips(sounds sound)
     {
-        soundtype item = Array.Find(Sounds, i => i.SoundType == sound);
+        SoundType item = Array.Find(Sounds, i => i.Sounds == sound);
         if (item != null) {
 
             return item.SoundClip;
@@ -84,7 +84,7 @@ public class SoundManager : MonoBehaviour
         ButtonClick,
         PlayerMove,
         PlayerDeath,
-        background
+        BackGround
        
 
     }

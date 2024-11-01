@@ -8,15 +8,15 @@ using UnityEngine.SceneManagement;
 public class QuitGamelogic : MonoBehaviour
 {
    
-    public  Button quitbutton;
+    public  Button QuitButton;
     
    
     void Start()
     {
-        quitbutton.onClick.AddListener(onclickquit);
+        QuitButton.onClick.AddListener(OnClickQuit);
     }
 
-    private void onclickquit()
+    private void OnClickQuit()
     {
         Debug.Log("YOU QUIT THE GAME");
       Application.Quit();

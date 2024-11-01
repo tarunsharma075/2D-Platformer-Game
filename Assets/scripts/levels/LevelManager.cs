@@ -5,16 +5,16 @@ using UnityEngine.SceneManagement;
 
     public class LevelManager : MonoBehaviour
     {
-        private static LevelManager insatance;
-        public static LevelManager Instance { get { return insatance; } }
+        private static LevelManager _instance;
+        public static LevelManager Instance { get { return _instance; } }
     public string level1;
 
         private void Awake()
         {
-            if (insatance == null)
+            if (_instance == null)
             {
 
-                insatance = this;
+                _instance = this;
              
             DontDestroyOnLoad(gameObject);
         }
@@ -29,23 +29,23 @@ using UnityEngine.SceneManagement;
 
     private void Start()
     {
-        if (getstatus("level 1") == LevelStatus.locked)
+        if (GetStatus("level 1") == LevelStatus.Locked)
         {
-            setstatus("level 1", LevelStatus.unlocked);
+            SetStatus("level 1", LevelStatus.Unlocked);
         }
-        if (getstatus("Staringscence") == LevelStatus.locked){
+        if (GetStatus("Staringscence") == LevelStatus.Locked){
 
-            setstatus("Staringscence", LevelStatus.unlocked);
+            SetStatus("Staringscence", LevelStatus.Unlocked);
         }
     }
 
-    public LevelStatus getstatus(string Levelname)
+    public LevelStatus GetStatus(string Levelname)
     {
         LevelStatus LS= (LevelStatus) PlayerPrefs.GetInt(Levelname, 0);
         return LS;
     }
 
-    public void setstatus(string Levelname, LevelStatus Levelstatus)
+    public void SetStatus(string Levelname, LevelStatus Levelstatus)
     {
 
         PlayerPrefs.SetInt(Levelname, (int)Levelstatus);
@@ -55,11 +55,11 @@ using UnityEngine.SceneManagement;
 
     public void MarkLevelComplete(string level)
     {
-        LevelManager.Instance.setstatus(SceneManager.GetActiveScene().name, LevelStatus.completed);
+        LevelManager.Instance.SetStatus(SceneManager.GetActiveScene().name, LevelStatus.Completed);
         Scene CurrentScnce = SceneManager.GetActiveScene();
         int Next_Scence_Index = CurrentScnce.buildIndex + 1;
         Scene Next_Scence=  SceneManager.GetSceneByBuildIndex(Next_Scence_Index);
-        Instance.setstatus(Next_Scence.name, LevelStatus.completed);
+        Instance.SetStatus(Next_Scence.name, LevelStatus.Completed);
         SceneManager.LoadScene(Next_Scence_Index);
     }
     }

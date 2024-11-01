@@ -8,36 +8,36 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(Button))] 
 public class LevelLoader : MonoBehaviour
     {
-    private Button LevelButton;
-    public  string Level_name;
+    private Button _levelbutton;
+    public  string LevelName;
 
     private void Awake()
     {
-        LevelButton = GetComponent<Button>();
-        LevelButton.onClick.AddListener(onclick);
+        _levelbutton = GetComponent<Button>();
+        _levelbutton.onClick.AddListener(OnClick);
     }
 
-    private void onclick()
+    private void OnClick()
         
     {
-        LevelStatus  LS= LevelManager.Instance.getstatus(Level_name);
+        LevelStatus  LS= LevelManager.Instance.GetStatus(LevelName);
         switch (LS)
         {
 
-            case LevelStatus.locked:
+            case LevelStatus.Locked:
                 Debug.Log("LOCKED");
                 SoundManager.Instance.Play(SoundManager.sounds.ButtonClick);
                 break;
-          case LevelStatus.unlocked:
+          case LevelStatus.Unlocked:
                 Debug.Log("UNLOCKED");
                 SoundManager.Instance.Play(SoundManager.sounds.ButtonClick);
-                SceneManager.LoadScene(Level_name);
+                SceneManager.LoadScene(LevelName);
                 
                 break;
-            case LevelStatus.completed:
+            case LevelStatus.Completed:
                 Debug.Log("completed");
                 SoundManager.Instance.Play(SoundManager.sounds.ButtonClick);
-                SceneManager.LoadScene(Level_name);
+                SceneManager.LoadScene(LevelName);
                 break;
 
         }
