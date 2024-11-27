@@ -5,8 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class DeatgByFallingLogic : MonoBehaviour
 {
-     public GameObject _mainGameScreen;
-    public GameObject Player;
+   
     private Scene _activeScene;
     int _activeSceneIndex;
 
@@ -22,14 +21,10 @@ public class DeatgByFallingLogic : MonoBehaviour
         if (collision.gameObject.GetComponent<PlayerController>() != null)
         {
 
-            action();
+            
             SceneManager.LoadScene(_activeSceneIndex);
 
         }
     }
-    public void action()
-    {
-        _mainGameScreen.SetActive(true);
-        Player.SetActive(false);
-    }
+    
 }

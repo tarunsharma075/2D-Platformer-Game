@@ -82,9 +82,13 @@ public class SoundManager : MonoBehaviour
     public enum sounds
     {
         ButtonClick,
-        PlayerMove,
         PlayerDeath,
-        BackGround
+        BackGround,
+        keyCollection,
+        Jump,
+        StageClear,
+        GameOver,
+        Fall,
        
 
     }

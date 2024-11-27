@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
     {
         private static LevelManager _instance;
         public static LevelManager Instance { get { return _instance; } }
-    public string level1;
+ 
 
         private void Awake()
         {
@@ -65,6 +65,7 @@ using UnityEngine.SceneManagement;
             string NextLevelPath= SceneUtility.GetScenePathByBuildIndex(NextLevelIndex);
             string NextLevelName = System.IO.Path.GetFileNameWithoutExtension(NextLevelPath);
             SetStatus(NextLevelName, LevelStatus.Unlocked);
+            SoundManager.Instance.Play(SoundManager.sounds.StageClear);
             SceneManager.LoadScene(NextLevelName);
 
         }

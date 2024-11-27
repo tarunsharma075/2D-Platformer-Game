@@ -27,6 +27,7 @@ public class PlayButtonLogic : MonoBehaviour
     void OnClick()
     {
         Debug.Log("button clicked");
+        SoundManager.Instance.Play(SoundManager.sounds.ButtonClick);
         _lobby.SetActive(true);
         _playbutton.SetActive(false);
     }

@@ -19,6 +19,7 @@ public class QuitGamelogic : MonoBehaviour
     private void OnClickQuit()
     {
         Debug.Log("YOU QUIT THE GAME");
+        SoundManager.Instance.Play(SoundManager.sounds.ButtonClick);
       Application.Quit();
     }
     

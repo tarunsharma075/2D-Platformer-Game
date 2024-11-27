@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
 
         if (vertical > 0f) {
 
-            _rbobj.AddForce(new Vector2(0f,JumpForce),ForceMode2D.Impulse);
+            _rbobj.AddForce(new Vector2(0f,JumpForce),ForceMode2D.Force);
         }
     }
 

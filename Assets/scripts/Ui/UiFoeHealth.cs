@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UiFoeHealth : MonoBehaviour
 {
@@ -11,9 +12,11 @@ public class UiFoeHealth : MonoBehaviour
     [SerializeField] private Sprite _fullheart;
     [SerializeField] private Sprite _emptyheart;
     [SerializeField] private Animator _animator;
-    [SerializeField] private DeatgByFallingLogic _restartpop;
-    [SerializeField] private GameObject Player;
+    [SerializeField] private GameObject _player;
+    private Scene _currentScene;
+    private int _currentSceneIndex;
 
+   
 
     public void Damage()
     {
@@ -52,6 +55,8 @@ public class UiFoeHealth : MonoBehaviour
 
     private void Start()
     {
+        _currentScene = SceneManager.GetActiveScene();
+        _currentSceneIndex = _currentScene.buildIndex;
         RefreshUi();
 
 
@@ -60,18 +65,13 @@ public class UiFoeHealth : MonoBehaviour
     {
         _animator.SetBool("dead", true);
         yield return new WaitForSeconds(2f);
-        _restartpop.action();
-
+        _player.SetActive(false);
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene( _currentSceneIndex );
 
     }
 
-    //private IEnumerator PlayerStop()
-    //{
-    //    Player.SetActive(false);
-    //     yield return new WaitForSeconds(10f);
-    //    Player.SetActive(true);
-    //}
-
+   
 
 
 
