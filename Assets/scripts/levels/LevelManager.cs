@@ -33,9 +33,9 @@ using UnityEngine.SceneManagement;
         {
             SetStatus("level 1", LevelStatus.Unlocked);
         }
-        if (GetStatus("Staringscence") == LevelStatus.Locked){
+        if (GetStatus("StartingScene") == LevelStatus.Locked){
 
-            SetStatus("Staringscence", LevelStatus.Unlocked);
+            SetStatus("StartingScene", LevelStatus.Unlocked);
         }
     }
 

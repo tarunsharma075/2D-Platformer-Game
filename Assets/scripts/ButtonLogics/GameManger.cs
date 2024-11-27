@@ -21,7 +21,7 @@ public class GameManger : MonoBehaviour
     
     private  void OnClickMainMenuButton()
     {
-        SceneManager.LoadScene("Staringscence");
+        SceneManager.LoadScene("");
     }
    private  void OnClickResumeButton()
     {

@@ -56,6 +56,7 @@ public class PlayerController : MonoBehaviour
 
         if (vertical > 0f) {
 
+            SoundManager.Instance.Play(SoundManager.sounds.Jump);
             _rbobj.AddForce(new Vector2(0f,JumpForce),ForceMode2D.Force);
         }
     }

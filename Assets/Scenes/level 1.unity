@@ -188,9 +188,9 @@ RectTransform:
   - {fileID: 508165022}
   m_Father: {fileID: 1096249242}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -148.5}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 326}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &45635936
@@ -3639,8 +3639,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d804db1c91449d4ca1936984f333fe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mainGameScreen: {fileID: 1945365683}
-  Player: {fileID: 1945365683}
 --- !u!61 &1271833955
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4147,7 +4145,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1693749802}
   - component: {fileID: 1693749801}
-  - component: {fileID: 1693749800}
   - component: {fileID: 1693749803}
   m_Layer: 0
   m_Name: 'Main Camera '
@@ -4156,14 +4153,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1693749800
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1693749798}
-  m_Enabled: 0
 --- !u!20 &1693749801
 Camera:
   m_ObjectHideFlags: 0

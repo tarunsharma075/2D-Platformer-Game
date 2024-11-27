@@ -296,7 +296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SoundEffects: {fileID: 976790532}
-  BackGroundMusic: {fileID: 0}
+  BackGroundMusic: {fileID: 1095625076}
   Sounds:
   - Sounds: 0
     SoundClip: {fileID: 8300000, guid: df6d1af64fdebb04d80a54b27b720509, type: 3}
@@ -306,6 +306,16 @@ MonoBehaviour:
     SoundClip: {fileID: 8300000, guid: 72930e0ae6db4fa4d85c8b79f8a7db10, type: 3}
   - Sounds: 7
     SoundClip: {fileID: 8300000, guid: 3d82ae6b19150b5408ddad6dbf607ffd, type: 3}
+  - Sounds: 5
+    SoundClip: {fileID: 8300000, guid: 9c5c83ea6716bfd4292a78b01e0f97f7, type: 3}
+  - Sounds: 1
+    SoundClip: {fileID: 8300000, guid: c984152701bf68a4298db2311a2964ed, type: 3}
+  - Sounds: 4
+    SoundClip: {fileID: 8300000, guid: 129b578a3c7f43d458fb0bd5038eab41, type: 3}
+  - Sounds: 4
+    SoundClip: {fileID: 8300000, guid: 129b578a3c7f43d458fb0bd5038eab41, type: 3}
+  - Sounds: 2
+    SoundClip: {fileID: 8300000, guid: 129b578a3c7f43d458fb0bd5038eab41, type: 3}
 --- !u!4 &318763693
 Transform:
   m_ObjectHideFlags: 0
@@ -333,7 +343,6 @@ GameObject:
   m_Component:
   - component: {fileID: 636133983}
   - component: {fileID: 636133982}
-  - component: {fileID: 636133981}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -341,14 +350,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &636133981
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 636133980}
-  m_Enabled: 1
 --- !u!20 &636133982
 Camera:
   m_ObjectHideFlags: 0
