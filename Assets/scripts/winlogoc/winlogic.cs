@@ -5,30 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class WinLogic : MonoBehaviour
 {
-    public  string NextLevel;
-    
-    
-
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.GetComponent<PlayerController>()) {
 
-            
+            LevelManager.Instance.MarkLevelComplete();
            
-            LevelManager.Instance.SetStatus(SceneManager.GetActiveScene().name, LevelStatus.Completed);
-            LevelManager.Instance.SetStatus(NextLevel,LevelStatus.Unlocked);
-                       SceneManager.LoadScene(NextLevel);
+          
         }
     }
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 }

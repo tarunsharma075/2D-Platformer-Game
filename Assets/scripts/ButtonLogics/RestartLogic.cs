@@ -1,30 +1,38 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+
 public class RestartLogic : MonoBehaviour
-
-
 {
+    [SerializeField] private Button _clickedbutton; // Drag the button here in the Inspector
+    private Scene _activeScene;
+     int  _activeSceneIndex;
 
-    public string LevelToChange;
-    public Button _clickedbutton;
-    // Start is called before the first frame update
-
-    private void Awake()
+    private void Start()
     {
-        _clickedbutton = gameObject.GetComponent<Button>();
+        
+        if (_clickedbutton != null)
+        {
+            _clickedbutton.onClick.AddListener(OnClick);
+        }
+        else
+        {
+            Debug.LogError("Button reference is not assigned in the Inspector.");
+        }
 
     }
-   public void Start()
-    {
-        _clickedbutton.onClick.AddListener(OnClick);
-    }
 
-   public void OnClick()
+    private void OnClick()
     {
-        SceneManager.LoadScene(LevelToChange);
+        if (_activeScene != null)
+        {
+            Debug.Log("button clicked");
+            SceneManager.LoadScene(_activeSceneIndex);
+        }
+        else
+        {
+            Debug.LogError("Active scene not found.");
+        }
     }
 }

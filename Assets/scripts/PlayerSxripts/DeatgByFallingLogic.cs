@@ -5,21 +5,31 @@ using UnityEngine.SceneManagement;
 
 public class DeatgByFallingLogic : MonoBehaviour
 {
-     public GameObject RestartPopup;
+     public GameObject _mainGameScreen;
     public GameObject Player;
-    private void OnCollisionEnter2D(Collision2D collision)
+    private Scene _activeScene;
+    int _activeSceneIndex;
+
+
+    private void Start()
     {
-        if(collision.gameObject.GetComponent<PlayerController>() != null)
-        {
-              
-            action();
-           
-        }
+        _activeScene = SceneManager.GetActiveScene();
+        _activeSceneIndex = _activeScene.buildIndex;
     }
 
-   public void action()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        RestartPopup.SetActive(true);
+        if (collision.gameObject.GetComponent<PlayerController>() != null)
+        {
+
+            action();
+            SceneManager.LoadScene(_activeSceneIndex);
+
+        }
+    }
+    public void action()
+    {
+        _mainGameScreen.SetActive(true);
         Player.SetActive(false);
     }
 }

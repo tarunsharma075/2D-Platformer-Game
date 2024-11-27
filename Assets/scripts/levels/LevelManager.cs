@@ -49,18 +49,30 @@ using UnityEngine.SceneManagement;
     {
 
         PlayerPrefs.SetInt(Levelname, (int)Levelstatus);
-
+        PlayerPrefs.Save();
 
     }
 
-    public void MarkLevelComplete(string level)
+    public void MarkLevelComplete()
     {
         LevelManager.Instance.SetStatus(SceneManager.GetActiveScene().name, LevelStatus.Completed);
         Scene CurrentScnce = SceneManager.GetActiveScene();
-        int Next_Scence_Index = CurrentScnce.buildIndex + 1;
-        Scene Next_Scence=  SceneManager.GetSceneByBuildIndex(Next_Scence_Index);
-        Instance.SetStatus(Next_Scence.name, LevelStatus.Completed);
-        SceneManager.LoadScene(Next_Scence_Index);
+        int NextLevelIndex = CurrentScnce.buildIndex + 1;
+
+        if(NextLevelIndex< SceneManager.sceneCountInBuildSettings)
+        {
+
+            string NextLevelPath= SceneUtility.GetScenePathByBuildIndex(NextLevelIndex);
+            string NextLevelName = System.IO.Path.GetFileNameWithoutExtension(NextLevelPath);
+            SetStatus(NextLevelName, LevelStatus.Unlocked);
+            SceneManager.LoadScene(NextLevelName);
+
+        }
+        else
+        {
+            Debug.Log("There is No level ago");
+        }
+       
     }
     }
 

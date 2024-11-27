@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public UiForScore ScoreController;
     public static int LevelIndex;
     [SerializeField] private UiFoeHealth _healthchange;
+    private bool _isTrigger = false;
     
     
 
@@ -55,7 +56,7 @@ public class PlayerController : MonoBehaviour
 
         if (vertical > 0f) {
 
-            _rbobj.AddForce(new Vector2(0f,JumpForce),ForceMode2D.Force);
+            _rbobj.AddForce(new Vector2(0f,JumpForce),ForceMode2D.Impulse);
         }
     }
 
@@ -71,5 +72,31 @@ public class PlayerController : MonoBehaviour
     {
         _healthchange.Damage();
     }
-  
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.GetComponent<EnemyController>() != null)
+        {
+            _isTrigger = true;
+            if (this.transform.position.x < 1)
+            {
+                this.transform.position = new Vector3(this.transform.position.x + 2, this.transform.position.y, this.transform.position.z);
+            }
+            else if (this.transform.position.x > 1)
+            {
+                this.transform.position = new Vector3(this.transform.position.x - 2, this.transform.position.y, this.transform.position.z);
+            }
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.GetComponent<EnemyController>() != null)
+        {
+            Debug.Log("Exited Trigger with Enemy");
+            _isTrigger = false; 
+        }
+    }
+
+
 }
