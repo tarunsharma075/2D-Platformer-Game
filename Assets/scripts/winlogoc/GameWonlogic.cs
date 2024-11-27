@@ -14,9 +14,10 @@ public class GameWonlogic : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<PlayerController>()) {
 
-            
-           
-            LevelManager.Instance.SetStatus(SceneManager.GetActiveScene().name, LevelStatus.Completed);
+
+
+            LevelManager.Instance.MarkLevelComplete();
+            SoundManager.Instance.Play(SoundManager.sounds.StageClear);
             WinScreen.SetActive(true);
         }
     }

@@ -9,6 +9,7 @@ public class WinLogic : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<PlayerController>()) {
 
+            SoundManager.Instance.Play(SoundManager.sounds.StageClear);
             LevelManager.Instance.MarkLevelComplete();
            
           

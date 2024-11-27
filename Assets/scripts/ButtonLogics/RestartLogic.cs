@@ -27,7 +27,7 @@ public class RestartLogic : MonoBehaviour
     {
         if (_activeScene != null)
         {
-            Debug.Log("button clicked");
+            SoundManager.Instance.Play(SoundManager.sounds.ButtonClick);
             SceneManager.LoadScene(_activeSceneIndex);
         }
         else

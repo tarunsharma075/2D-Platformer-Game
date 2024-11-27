@@ -21,7 +21,7 @@ public class DeatgByFallingLogic : MonoBehaviour
         if (collision.gameObject.GetComponent<PlayerController>() != null)
         {
 
-            
+           
             SceneManager.LoadScene(_activeSceneIndex);
 
         }
