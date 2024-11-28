@@ -21,7 +21,7 @@ public class GameManger : MonoBehaviour
     
     private  void OnClickMainMenuButton()
     {
-        SceneManager.LoadScene("");
+        SceneManager.LoadScene("StartingScene");
     }
    private  void OnClickResumeButton()
     {

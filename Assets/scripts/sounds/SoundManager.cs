@@ -12,9 +12,9 @@ public class SoundManager : MonoBehaviour
     private static SoundManager _instance;
     public static SoundManager Instance { get { return _instance; } }
     
-    public AudioSource SoundEffects;
-    public AudioSource BackGroundMusic;
-    public SoundType[] Sounds;
+    [SerializeField]public AudioSource SoundEffects;
+    [SerializeField] public AudioSource BackGroundMusic;
+    [SerializeField] public SoundType[] Sounds;
 
 
 
@@ -52,6 +52,10 @@ public class SoundManager : MonoBehaviour
             BackGroundMusic.clip= clip;
             BackGroundMusic.Play();
         }
+        else if(clip==null)
+        {
+            Debug.Log("No bg music");
+        }
     }
 
 
@@ -87,13 +91,12 @@ public class SoundManager : MonoBehaviour
     {
         ButtonClick,
         PlayerDeath,
-        BackGround,
         keyCollection,
         Jump,
         StageClear,
         GameOver,
         Fall,
-       
+        BackGround,
 
     }
 }

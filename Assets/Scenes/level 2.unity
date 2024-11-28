@@ -6044,7 +6044,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 5
-  JumpForce: 8
+  JumpForce: 10
   ScoreController: {fileID: 1201522641}
   _healthchange: {fileID: 595617250}
 --- !u!95 &1863156602

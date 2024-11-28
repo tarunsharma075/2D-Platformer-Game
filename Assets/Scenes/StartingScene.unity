@@ -300,20 +300,18 @@ MonoBehaviour:
   Sounds:
   - Sounds: 0
     SoundClip: {fileID: 8300000, guid: df6d1af64fdebb04d80a54b27b720509, type: 3}
-  - Sounds: 2
-    SoundClip: {fileID: 8300000, guid: 9abe251653f10eb4993d5284fc538110, type: 3}
   - Sounds: 3
-    SoundClip: {fileID: 8300000, guid: 72930e0ae6db4fa4d85c8b79f8a7db10, type: 3}
-  - Sounds: 7
-    SoundClip: {fileID: 8300000, guid: 3d82ae6b19150b5408ddad6dbf607ffd, type: 3}
+    SoundClip: {fileID: 8300000, guid: 129b578a3c7f43d458fb0bd5038eab41, type: 3}
   - Sounds: 5
-    SoundClip: {fileID: 8300000, guid: 9c5c83ea6716bfd4292a78b01e0f97f7, type: 3}
+    SoundClip: {fileID: 8300000, guid: c984152701bf68a4298db2311a2964ed, type: 3}
   - Sounds: 1
     SoundClip: {fileID: 8300000, guid: c984152701bf68a4298db2311a2964ed, type: 3}
   - Sounds: 4
-    SoundClip: {fileID: 8300000, guid: 129b578a3c7f43d458fb0bd5038eab41, type: 3}
+    SoundClip: {fileID: 8300000, guid: 9c5c83ea6716bfd4292a78b01e0f97f7, type: 3}
   - Sounds: 2
-    SoundClip: {fileID: 8300000, guid: af88723fe1771334992707899302d3b2, type: 3}
+    SoundClip: {fileID: 8300000, guid: 72930e0ae6db4fa4d85c8b79f8a7db10, type: 3}
+  - Sounds: 7
+    SoundClip: {fileID: 8300000, guid: ef62692c24b6c934aae3b178f5c3a0a9, type: 3}
 --- !u!4 &318763693
 Transform:
   m_ObjectHideFlags: 0
@@ -1019,7 +1017,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 0.059
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

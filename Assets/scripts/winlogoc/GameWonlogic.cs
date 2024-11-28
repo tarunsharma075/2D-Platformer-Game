@@ -8,7 +8,7 @@ public class GameWonlogic : MonoBehaviour
 {
     public GameObject _winGameScreen;
     public GameObject _mainGameScrren;
-
+    public GameObject _player;
 
 
 
@@ -29,6 +29,7 @@ public class GameWonlogic : MonoBehaviour
     {
          _winGameScreen.SetActive(true);
         _mainGameScrren.SetActive(false);
+        _player.SetActive(false);
         yield return new WaitForSeconds(2);
         SceneManager.LoadScene("StartingScene");
     }
