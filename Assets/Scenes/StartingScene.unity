@@ -312,10 +312,8 @@ MonoBehaviour:
     SoundClip: {fileID: 8300000, guid: c984152701bf68a4298db2311a2964ed, type: 3}
   - Sounds: 4
     SoundClip: {fileID: 8300000, guid: 129b578a3c7f43d458fb0bd5038eab41, type: 3}
-  - Sounds: 4
-    SoundClip: {fileID: 8300000, guid: 129b578a3c7f43d458fb0bd5038eab41, type: 3}
   - Sounds: 2
-    SoundClip: {fileID: 8300000, guid: 129b578a3c7f43d458fb0bd5038eab41, type: 3}
+    SoundClip: {fileID: 8300000, guid: af88723fe1771334992707899302d3b2, type: 3}
 --- !u!4 &318763693
 Transform:
   m_ObjectHideFlags: 0
@@ -2146,37 +2144,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LevelName: level 4
---- !u!1 &1792761482
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1792761484}
-  m_Layer: 0
-  m_Name: bgmusic
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1792761484
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1792761482}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 448.46304, y: 255.82538, z: -0.4991743}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1837823589
 GameObject:
   m_ObjectHideFlags: 0
@@ -2587,7 +2554,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 636133983}
   - {fileID: 958945675}
-  - {fileID: 1792761484}
   - {fileID: 841015382}
   - {fileID: 1034106712}
   - {fileID: 1085897068}

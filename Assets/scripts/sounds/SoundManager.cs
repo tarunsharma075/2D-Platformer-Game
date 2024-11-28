@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 public class SoundManager : MonoBehaviour
@@ -29,6 +30,9 @@ public class SoundManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+
+    
 
     //this class is for speific sound type you want to play a particular sound
     [Serializable]

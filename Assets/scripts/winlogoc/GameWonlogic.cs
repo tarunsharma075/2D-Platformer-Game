@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,9 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class GameWonlogic : MonoBehaviour
 {
-    public GameObject WinScreen;
-    
-    
+    public GameObject _winGameScreen;
+    public GameObject _mainGameScrren;
+
+
 
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -18,17 +20,16 @@ public class GameWonlogic : MonoBehaviour
 
             LevelManager.Instance.MarkLevelComplete();
             SoundManager.Instance.Play(SoundManager.sounds.StageClear);
-            WinScreen.SetActive(true);
+            StartCoroutine(WiningTheGame());
+            
         }
     }
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator WiningTheGame()
     {
-        
+         _winGameScreen.SetActive(true);
+        _mainGameScrren.SetActive(false);
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene("StartingScene");
     }
 }

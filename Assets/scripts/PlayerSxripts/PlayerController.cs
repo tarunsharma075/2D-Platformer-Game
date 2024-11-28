@@ -66,6 +66,7 @@ public class PlayerController : MonoBehaviour
 
     public void pickup()
     {
+        SoundManager.Instance.Play(SoundManager.sounds.keyCollection);
         ScoreController.IncreaseScore(10);
     }
 
