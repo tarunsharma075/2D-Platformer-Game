@@ -678,8 +678,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf98679744ee6fa4fa5b262780ad9572, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 8
-  JumpForce: 10
+  Speed: 5
+  JumpForce: 35
   ScoreController: {fileID: 755951185}
   _healthchange: {fileID: 1224805418}
 --- !u!95 &168154042
@@ -763,7 +763,7 @@ Rigidbody2D:
   m_Mass: 2
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1.5
+  m_GravityScale: 1.8
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
